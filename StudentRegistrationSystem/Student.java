@@ -20,6 +20,15 @@ public class Student {
     return name;
   }
 
+  public void setName(String name) {
+    this.name = name;
+  }
+  public void setId(String id) {
+    this.id = id;
+  }
+  public void setDep(String dep) {
+    this.dep = dep;
+  }
   public void setYear(int year) {
     this.year = year;
   }
