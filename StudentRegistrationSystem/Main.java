@@ -9,8 +9,8 @@ import java.io.IOException;
 
 public class Main {
 
-    // Existing code...
 
+// Method to write student information to a file
     private static void writeStudentToFile(Student student) {
         String fileName = "StudentRegistrationSystem/student_info.txt";
 
@@ -29,10 +29,11 @@ public class Main {
     }
 
 
-
+ // Main method to execute the student registration system
     public static void main(String[] args) {
         try (Scanner input = new Scanner(System.in)) {
             System.out.println("************************ Welcome to Haramaya University Student Registration System ******************************** ");
+            // Register a student
             Student student = registerStudent(input);
 
             boolean continueRegistration = true;
@@ -59,7 +60,7 @@ public class Main {
         }
     }
 
-
+// Method to register a student by taking input from the user
     private static Student registerStudent(Scanner input) {
         System.out.print("Full name: ");
         String fullName = input.nextLine();
@@ -76,7 +77,7 @@ public class Main {
 
         return new Student(fullName, id, department, year, semester);
     }
-
+  // Method to get a valid integer input from the user
     private static int getValidInput(String prompt, Scanner input) {
         int value = 0;
         boolean validInput = false;
@@ -94,7 +95,7 @@ public class Main {
 
         return value;
     }
-
+// Method to validate the semester input (1 or 2)
     private static int validateSemester(String prompt,Scanner input) {
         int semester = 0;
         boolean validInput = false;
@@ -116,6 +117,7 @@ public class Main {
         }
         return semester;
       }
+       // Method to display the registration slip for a student
     private static void displayRegistrationSlip(Student student) {
         List<Course> studentCourseTable = Course.generateCourseTable(student);
         System.out.println("Name: " + student.getName() + "\t\tId No: " + student.getId());
@@ -123,7 +125,7 @@ public class Main {
                 "\t\tYear: " + student.getYear() + "\t\tsemester: " + student.getSemester());
         Course.displayCourseTable(studentCourseTable);
     }
-
+ // Method to capitalize the first letter of a string
     private static String capitalizeFirstLetter(String input) {
         return input.substring(0, 1).toUpperCase() + input.substring(1).toLowerCase();
     }

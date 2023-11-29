@@ -15,7 +15,7 @@ public class Student {
   }  
   public Student() {
   }
-  // Getters  
+  // Setters and Getters  
   public String getName() {
     return name;
   }

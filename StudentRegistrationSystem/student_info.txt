@@ -1,7 +1,14 @@
-******* Student Information ************
+******* Student Information **********
 -----------------------
 Name: Michael Birhanu
 ID: 4965/14
 Department: software engineering
 Year: 2
 Semester: 2
+
+-----------------------
+Name: Dagi
+ID: 51273
+Department: sof
+Year: 2
+Semester: 1
